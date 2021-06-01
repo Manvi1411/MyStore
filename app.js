@@ -58,6 +58,6 @@ app.use((req, res, next)=> {
 app.use(userRoutes);
 app.use(adminRoutes);
 const port= process.env.Port;
-app.listen(port,()=>{
+app.listen(port||3000,()=>{
     console.log("connected");
 });
