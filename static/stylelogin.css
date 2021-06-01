@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Work+Sans&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    
+     /* background-blend-mode:darken; */
+    font-family: 'Nunito', sans-serif;
+}
+.container{
+    height:100vh;
+    display:flex;
+    margin:auto;
+    align-items:center;
+    justify-content:center;
+    /* background-image: linear-gradient(to bottom right, rgb(255 0 0 / 58%), rgba(255,0,0,0)); */
+    background-image: linear-gradient(to bottom right, rgb(255 0 0 / 58%), rgb(255 0 0 / 17%));
+   
+    
+    
+}
+/*.container::before{
+    content:"";
+    background: url('/static/img/bg22.jpg') no-repeat center center/cover;
+    height:100vh;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    opacity:1.2;
+}*/
+.small1{
+    height: 3em;
+}
+.small1 img{
+    height:3em;
+    display:none;
+}
+.small2{
+    height:80vh;
+}
+form{
+    padding:24px 34px;
+    /* border: 1px solid #ffac00; */
+    /* background-image: linear-gradient(to bottom right, rgb(255 0 0 / 58%), rgba(255,0,0,0)); */
+    background-image: linear-gradient(to bottom right, rgb(255 0 0 / 8%), rgba(255,0,0,0));
+    height: 30rem;
+    width: 24rem;
+    box-shadow: 0 0 86px -11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 86px;
+
+}
+form .large{
+
+    height: 14rem;
+    width: 18rem;
+}
+form h1{
+    margin-bottom: 64px;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Work Sans', sans-serif;
+    font-weight:800;
+}
+form img{
+    height:3.5em;
+}
+.image{
+    display:flex;
+    margin:auto;
+    align-items:center;
+    justify-content:center;
+}
+form h2{
+    margin-bottom:20px;
+    
+}
+form .box{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.box i{
+    font-size: 10px;
+    padding: 0px 5px;
+}
+form input{
+    background: none;
+    /* border: 2px solid #131212; */
+    border: 2px solid #6e6262;
+    padding: 14px 16px;
+    font-size: 12;
+    border-radius: 82px;
+    margin: 10px 0px;
+    outline: none;
+    width: 112%;
+}
+.btn{
+    width: 47%;
+    background-color: #f42568;
+    color: white;
+    border: 1px solid #f4257b;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 12px 0px;
+    font-size: 17px;
+    border-radius: 30px;
+    outline: none;
+}
+form .links{
+    margin-top: 43px;
+    text-align: center;
+}
+form .links a{
+    text-decoration: none;
+    color: #6e6262;
+    font-size: 14.4px;
+    margin-left: 14px;
+}
+.block{
+    margin-bottom: 8px;
+}
+h1{
+    font-weight: 100;
+    margin-bottom: 9px;
+}
+@media only screen and (min-device-width:1600px)
+{
+    .image img{
+        height: 11.5em;
+    }
+    .box input{
+        background: none;
+    border: 2px solid #faf8f8;
+    padding: 3px 6px;
+    font-size: 12;
+    border-radius: 2px;
+    margin: 10px 0px;
+    outline: none;
+    height: 64px;
+    width: 100%;
+    }
+    .btn{
+        width: 96%;
+    background-color: #25b9f4;
+    color: white;
+    border: 1px solid #25b9f4;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 4px 0px;
+    font-size: 20px;
+    outline: none;
+    height: 50px;
+    }
+    form a{
+        text-decoration: none;
+    color: white;
+    font-size: 27px;
+    margin-left: 14px;
+    }
+}
+
+@media only screen and (max-device-width:900px)
+{
+    .image img{
+        height: 11.5em;
+    }
+    .box input{
+        background: none;
+    border: 2px solid #faf8f8;
+    padding: 3px 6px;
+    font-size: 12;
+    border-radius: 2px;
+    margin: 10px 0px;
+    outline: none;
+    height: 64px;
+    width: 100%;
+    }
+    .btn{
+        width: 96%;
+    background-color: #25b9f4;
+    color: white;
+    border: 1px solid #25b9f4;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 4px 0px;
+    font-size: 20px;
+    outline: none;
+    height: 50px;
+    }
+    form .links a{
+        text-decoration: none;
+    color: white;
+    font-size: 27px;
+    margin-left: 14px;
+    }
+}
+
+
+

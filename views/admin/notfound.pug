@@ -1,0 +1,25 @@
+html
+  head
+    title 
+    block scripts
+        script(src="https://kit.fontawesome.com/3f4bdd8d17.js" crossorigin="anonymous")
+    block style
+        style
+            link(rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css")
+            include ../../static/design.css
+            include ../../static/style.css
+            include ../../static/notfound.css
+  body
+    block content
+        nav#navbar 
+            div.logo 
+                img(src="../../static/img/bg6.png", alt="Error Loading Image")
+            ul.navlist
+                li #[a(href="#") My Store]
+        div.container 
+            div.contain
+                div.box
+                    h1 404 Not Found This Page does not exist
+                div.login.newuserbtn
+                    a(href='/login',style="color:black;" )
+                        |Go to Login

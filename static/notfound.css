@@ -1,0 +1,17 @@
+.container{
+    height:100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login{
+    margin: 28px 170px;
+    background-color: #ef415fcf;
+    border: 1px solid pink;
+    width: 26%;
+    text-align: center;
+    padding: 15px 8px;
+    border-radius: 30px;
+    font-size: 22px;
+}

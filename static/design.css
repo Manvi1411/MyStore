@@ -1,0 +1,97 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script&display=swap');
+ .wrapper {
+    display: grid;
+    width: 250px;
+    align-items: stretch;
+    /* height: 150vh; */
+    /*grid-template-columns: 0.5fr 2fr;*/
+    /* grid-template-areas:  
+    'sidebar container';*/
+} 
+#sidebar {
+    /* min-width: 100%; */
+    /* max-width: 100%; */
+    /* background:  rgba(245, 86, 28, 0.938);; */
+    background:rgb(255 0 0 / 58%);
+    color: #fff;
+    width: 304px;
+    transition: all 0.3s;
+    height:132vh;
+    padding: 17px 29px;
+}
+#sidebar.active{
+	margin-left: -250px;
+}
+
+#sidebar .sidebar-header{
+	padding: 20px;
+	background: rgb(255 0 0 / 58%);
+}
+#sidebar ul.components{
+	padding: 20px 0px;
+	border-bottom: 1px solid rgb(255 0 0 / 58%);
+}
+#sidebar ul li{
+    list-style: none;
+}
+#sidebar ul li a{
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
+    list-style:none;
+    padding: 15px 15px;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'Zilla Slab', serif;
+    color:black;
+    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+}
+#sidebar ul li a:hover {
+    color:  rgb(255 0 0 / 58%);
+    background: #fff;
+}
+.dropdown-toggle li a{
+    font-size:18px;
+    /* font-family: 'Parisienne', cursive !important; */
+    
+   
+}
+#sidebar ul li ul a{
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+}
+.dropdown-toggle li a i{
+    margin-right:9px;
+    
+}
+li a i{
+    margin-right:9px;
+}
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    /* background:rgb(255 0 0 / 58%); */
+    
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    
+}
+
+ul ul a {
+    font-size: 1.22rem !important;
+    padding-left: 30px !important;
+    /* background:rgb(255 0 0 / 58%); */
+}
+a{
+    color:white;
+}

@@ -1,0 +1,28 @@
+extends header.pug 
+
+block scripts
+    script(src='../static/index.js')
+
+block style
+    style
+      include ../../static/stylelogin.css
+      include ../../static/style.css
+block content
+    div.container
+        div.small2
+            div.block1
+                include ../partials/messages.pug
+            form(action="login",method="post")
+                h1 Login
+                div.large
+                    div.box 
+                        input(type="email",name="email",id="email" ,class="emailid",placeholder="Enter your Email")
+                    div.box 
+                        input(type="password",name="password",id="password",class="passwords" placeholder="Enter your Password")
+                    div.box
+                        button(class="btn", name="submit", type="submit")
+                            | LOGIN
+                    div.links
+                        a(href="/forgot") Forgot password
+                        
+                

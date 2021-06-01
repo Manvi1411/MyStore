@@ -1,0 +1,53 @@
+html
+  head
+    title 
+    block scripts
+        script(src="https://kit.fontawesome.com/3f4bdd8d17.js" crossorigin="anonymous")
+    block style
+        style
+            link(rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css")
+            include ../../static/design.css
+            include ../../static/stylesignup.css
+            //- include ../../static/design.css
+            include ../../static/style.css
+  body
+    block content
+        nav#navbar 
+            div.logo 
+                    img(src="../../static/img/bg6.png", alt="Error Loading Image")
+            ul.navlist
+                li #[a(href="#") My Store]
+            div.rightnav 
+                if(currentUser)
+                    ul
+                        li #[a(href="/username") #{currentUser.name}]
+                        li #[a(href="/changepassword") Change Password]
+                        li #[a(href="/logout") Log Out]
+        div.container
+            div.cont
+                include ../partials/sidebar.pug
+            div.container1
+                div.para 
+                    h1 Add New User
+                div.block
+                    include ../partials/messages.pug
+                div.form 
+                    form(action="/signup", method="post")
+                        div.form-group
+                            i(class="fa fa-user")
+                            label
+                                | User Name:
+                            input(type="text",class="myInput",name="name")
+                        div.form-group 
+                            i(class="fa fa-envelope")
+                            label
+                                | Email Id:  
+                            input(type="email",class="myInputid",name="email")
+                        div.form-group 
+                            i(class="fa fa-key")
+                            label
+                                | Password:
+                            input(type="password",class="myInputpass",name="password")
+                        button(class="btn" name="submit" type="submit")
+                            |Register
+                    

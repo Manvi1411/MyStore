@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+.dashboard{
+    margin: 30px 22px;
+}
+.container1{
+    font-family: 'Bad Script', cursive;
+    color:black;
+}
+.firstrow{
+    height: 186;
+    background-color: rgb(229 103 103 / 77%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    border-radius: 35px;
+    box-shadow: 0 0 34px -14px;
+}
+.head{
+    color: #4d434b;
+    font-family: 'Zilla Slab', serif;
+}
+.value{
+    color: #4d434b;
+    font-family: 'Zilla Slab', serif;
+}
+.boxcard{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    color: white;
+    color: white;
+    margin: 0px 10px;
+}
+.head{
+    font-weight: 550;
+    font-size: 25px;
+    padding: 16px 1px;
+}
+.value{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Zilla Slab', serif;
+}
+.view{
+    color: #4d434b;
+    font-family: 'Zilla Slab', serif;
+}
+.secondrow{
+    /* background-color: red; */
+    margin: 41px 0px;
+    display:flex;
+    height: 269px;
+}
+.card2{
+    /* background-color: rgb(252 129 3); */
+    background-color: rgb(248 138 25 / 69%);
+    box-shadow: 0 0 34px -14px;
+}
+.card3{
+    /* background-color: rgb(172, 209, 9); */
+    background-color: rgb(172 209 9 / 58%);
+    box-shadow: 0 0 34px -14px;
+}
+.card4{
+    /* background-color: #ef3c3c;; */
+    background-color: #f6e511a6;
+    box-shadow: 0 0 34px -14px;
+}
+.card5{
+    /* background-color: #585d66; */
+    background-color: #0cf6136b;
+    box-shadow: 0 0 34px -14px;
+}
+.same{
+    margin: 0px 20px;
+    margin: 0px 20px;
+    width: 22%;
+    
+}
+.down a{
+    /* width: 85%; */
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.card21{
+    justify-content: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+.card22{
+    height: 69px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thirdrow{
+    margin: 0px 20px;
+}
+.fourthrow{
+    margin: 15px 0px;
+    display: flex;
+}
+.card6{
+    /* background-color:#d24d1c; */
+    background-color: rgb(233 151 112 / 88%);
+    width: 50%;
+    box-shadow: 0 0 34px -14px;
+}
+.card7{
+    /* background-color:#f66732; */
+    background-color: rgb(233 151 112 / 88%);
+    width: 50%;
+    box-shadow: 0 0 34px -14px;
+}

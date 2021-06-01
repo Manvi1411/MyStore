@@ -1,0 +1,74 @@
+table{
+    margin:26px auto;
+    /* display:flex; */
+    justify-content:center;
+    border:0em;
+}
+table thead tr th {
+    /* margin: 21px 12px; */
+    padding: 20px 47px;
+}
+table tbody  td {
+    /* margin: 21px 12px; */
+    padding: 12px 47px;
+}
+.btn-sm{
+    color: #0f0f0f;
+    list-style: none;
+    text-decoration: none;
+    background-color: #f10404b3;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 0px 7px;
+    width: 77px;
+    padding: 4px 6px;
+    text-align: center;
+    font-size: 14px;
+}
+button{
+    font-size: 22px;
+}
+.btnsm1{
+    background-color: skyblue;
+}
+td a{
+    color: #363333;
+    list-style: none;
+    text-decoration: none;
+    background-color: #82606052;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 0px 7px;
+    width: 77px;
+    padding: 3px 6px;
+    text-align: center;
+}
+.hi{
+    display: flex;
+}
+.editcontainer{
+    height:100vh;
+    display:flex;
+    margin:auto;
+    flex-direction: column;
+    align-items:center;
+}
+.editcontainer h2{
+    margin: 23px auto;
+}
+.editcontainer form{
+    display: flex;
+    flex-direction: column;
+}
+.editcontainer form input{
+    width: 254px;
+    margin: 9px;
+}
+.editcontainer .editbtn{
+    background-color: red;
+    border: 1px solid red;
+    padding: 2px;
+}
+.mssge{
+    background-color: lightgreen;
+}

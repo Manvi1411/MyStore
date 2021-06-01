@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+
+#navbar{
+    background-image: linear-gradient(to bottom right, rgb(255 0 0 / 58%), rgba(255,0,0,0));
+    display:flex;
+    height:68px;
+}
+#navbar li{
+    list-style: none;
+    margin: 0px 10px;
+    padding: 13px 4px;
+}
+#navbar .navlist li a{
+    text-decoration: none;
+    color:black;
+    font-size: 30px;
+    margin: 4px 0px;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Zilla Slab', serif;
+}
+#navbar .rightnav li a{
+    text-decoration: none;
+    color: black;
+    /* font-size: 30px; */
+    margin: 4px 3px;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Zilla Slab', serif;
+    font-size: 22px;
+}
+#navbar .logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height:80px;
+}
+.navlist{
+    width:50%;
+}
+#navbar .rightnav{
+    width:50%;
+}
+.rightnav ul{
+    display:flex;
+    float: right;
+}
+.mssge{
+    /* background-color: palevioletred; */
+    /* padding-left: 81px; */
+}
+.board
+{
+    align-items:center;
+}
+.block{
+    text-align: center;
+    /* padding: bottom:23px; */
+    width: 1143.35px;
+    padding-bottom: 39px;
+}
+.block1{
+    text-align: center;
+    /* padding: bottom:23px; */
+    /* width: 1143.35px; */
+    padding-bottom: 39px;
+}

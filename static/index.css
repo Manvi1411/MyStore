@@ -1,0 +1,49 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+.container{
+    height:100vh;
+    background-image: linear-gradient(to bottom right, rgb(255 0 0 / 58%), rgba(255,0,0,0));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.container .head .heading h1{
+    color: rgb(186 7 106); 
+    font-family: "Arial";
+    font-size: 5rem;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 5.45em;
+          /* added animation property to show the character one at a time*/
+    animation: type 3s steps(60, end);
+    /* font-family: 'Alegreya', serif; */
+    font-family: 'Satisfy', cursive;
+}
+@keyframes type{ 
+    from { 
+         width: 0; 
+         } 
+}
+.login a{
+    color: #451c31eb;
+    font-size: 41px;
+    text-decoration: none;
+    font-family: 'Alegreya', serif;
+    border-bottom: 2px solid #451c31eb;
+    font-weight: 550;
+}
+.logo{
+    height: 107px;
+}
+img{
+    height:10rem;
+}
+.container .head{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:5rem 0rem;
+}

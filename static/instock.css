@@ -1,0 +1,35 @@
+table{
+    height: 125px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    margin: 2px 2px;
+}
+.tab{
+    margin: 23px 3px;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.post{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+td a{
+    color: black;
+    margin: 7px;
+}
+table {
+    border-collapse: collapse;
+    /* border:2px solid red; */
+    table-layout: fixed;
+}
+th, td {
+    padding: 15px;
+    width:233px;
+    overflow: hidden;
+}

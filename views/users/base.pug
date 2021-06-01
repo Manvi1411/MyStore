@@ -1,0 +1,81 @@
+doctype html
+html
+  head
+    title 
+    block scripts
+        script(src="https://kit.fontawesome.com/3f4bdd8d17.js" crossorigin="anonymous")
+    block style
+        style
+            link(rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css")
+            include ../../static/design.css
+  body
+    nav#navbar 
+        div.logo 
+            img(src="../../static/img/bg6.png", alt="Error Loading Image")
+        ul.navlist
+            li #[a(href="#") My Store]
+        div.rightnav 
+            if(currentUser)
+                ul
+                    li #[a(href="/username") #{currentUser.name}]
+                    li #[a(href="/changepassword") Change Password]
+                    li #[a(href="/logout") Log Out]
+    if(currentUser)
+        div.wrapper 
+            nav#sidebar 
+                ul.list 
+                    li 
+                        a(href="/dashboard")
+                            i(class="fa fa-tachometer")
+                            | Dashboard
+                    li 
+                        a(href="/update")
+                            i(class="fa fa-refresh")
+                            | Update
+                    li 
+                        a(href="/new")
+                            i(class="fa fa-plus-circle")
+                            | Add New Product
+                    li 
+                        a(href="/search")
+                            i(class="fa fa-search")
+                            | Search Product 
+                    li 
+                        a(href="#WalmartSubmenu")
+                            i(class="fa fa-wikipedia-w")
+                            |Walmart 
+                        ul#WalmartSubmenu.dropdown-toggle
+                            li 
+                                a(href="/instock") 
+                                    i(class="fa fa-arrow-circle-up")
+                                        |In Stock
+                            li 
+                                a(href="/outofstock") 
+                                    i(class="fa fa-arrow-circle-down")
+                                        |Out of Stock
+                            li 
+                                a(href="/pricechanged") 
+                                    i(class="fa fa-usd")
+                                        |Price Changed 
+                            li 
+                                a(href="/backinstock") 
+                                    i(class="fa fa-backward")
+                                        |Back In Stock
+                    li 
+                        a(href="#UserSubmenu")
+                            i(class="fa fa-user")
+                                |User 
+                        ul#UserSubmenu.dropdown-toggle
+                            li 
+                                a(href="/signup")
+                                    i(class="fa fa-plus-circle")
+                                        |Add New User
+                            li 
+                                a(href="/all")
+                                    i(class="fa fa-eye")
+                                        |View Users
+                        
+    block content
+    
+
+        

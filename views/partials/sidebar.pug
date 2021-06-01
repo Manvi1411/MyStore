@@ -1,0 +1,58 @@
+script(src="https://kit.fontawesome.com/3f4bdd8d17.js" crossorigin="anonymous")
+div.wrapper 
+    nav#sidebar 
+        ul.list 
+            li 
+                a(href="/dashboard")
+                    i(class="fa fa-tachometer")
+                    | Dashboard
+            li 
+                a(href="/updateproduct")
+                    i(class="fa fa-refresh")
+                    | Update
+            li 
+                a(href="/new")
+                    i(class="fa fa-plus-circle")
+                    | Add New Product
+            li 
+                a(href="/search")
+                    i(class="fa fa-search")
+                    | Search Product 
+            li 
+                a(href="#WalmartSubmenu")
+                    i(class="fa fa-shopping-cart")
+                    |My Store
+                ul#WalmartSubmenus.dropdown-toggle
+                    li 
+                        a(href="/instock") 
+                            i(class="fa fa-arrow-circle-up")
+                            |In Stock
+                    li 
+                        a(href="/outofstock") 
+                            i(class="fa fa-arrow-circle-down")
+                            |Out of Stock
+                    li 
+                        a(href="/pricechanged") 
+                            i(class="fa fa-usd")
+                            |Price Changed 
+                    li 
+                        a(href="/backinstock") 
+                            i(class="fa fa-backward")
+                            |Back In Stock
+            li 
+                a(href="#UserSubmenu")
+                    i(class="fa fa-user")
+                    |User 
+                ul#UserSubmenu.dropdown-toggle
+                    li 
+                        a(href="/signup")
+                            i(class="fa fa-plus-circle")
+                            |Add New User
+                    li 
+                        a(href="/all")
+                            i(class="fa fa-eye")
+                            |View Users
+                        
+                                
+
+            

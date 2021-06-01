@@ -1,0 +1,22 @@
+html
+  head
+    title 
+    block scripts
+        script(src="https://kit.fontawesome.com/3f4bdd8d17.js" crossorigin="anonymous")
+    block style
+        style
+            link(rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css")
+            include ../../static/design.css
+            include ../../static/style.css
+            include ../../static/index.css
+  body
+    block content
+        div.container
+            div.head 
+                div.logo 
+                    img(src="../../static/img/bg6.png", alt="Error Loading Image")
+                div.heading 
+                    h1 MY STORE
+            div.login
+                a(href='/login')
+                    |Login

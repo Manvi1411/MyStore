@@ -1,0 +1,38 @@
+html
+  head
+    title 
+    block scripts
+        script(src="https://kit.fontawesome.com/3f4bdd8d17.js" crossorigin="anonymous")
+    block style
+        style
+            link(rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css")
+            include ../../static/design.css
+            include ../../static/stylesignup.css
+            //- include ../../static/design.css
+            include ../../static/style.css
+            include ../../static/alluser.css
+  body
+    block content
+        nav#navbar 
+            div.logo 
+                img(src="../../static/img/bg6.png", alt="Error Loading Image")
+            ul.navlist
+                li #[a(href="#") My Store]
+            div.rightnav 
+                if(currentUser)
+                    ul
+                        li #[a(href="/username") #{currentUser.name}]
+                        li #[a(href="/changepassword") Change Password]
+                        li #[a(href="/logout") Log Out]
+        div.container
+            div.cont
+                include ../partials/sidebar.pug
+            div.container1
+                div.editcontainer 
+                    h2 Update User Data 
+                    form(action="/edit/"+user._id+"?_method=PUT", method="post")
+                        input(type="hidden", name="_method" ,value="PUT")
+                        input(type="text" , name="name", value=user.name, placeholder="Name")
+                        input(type="email" , name="email", value=user.email, placeholder="Email Address")
+                        button(type="submit" ,class="editbtn")
+                            | Update Employee

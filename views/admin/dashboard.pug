@@ -1,0 +1,130 @@
+html
+  head
+    title 
+    block scripts
+        script(src="https://kit.fontawesome.com/3f4bdd8d17.js" crossorigin="anonymous")
+    block style
+        style
+            link(rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css")
+            include ../../static/design.css
+            include ../../static/style.css
+            include ../../static/dashboard.css
+            include ../../static/stylesignup.css
+  body
+    block content
+        -var total=0
+        -var instock=outofstock=pricechanged=backinstock=updated=notupdated=0
+        each product in products
+            -total=total+1
+            -if(product.newstock=="In stock")
+                -instock=instock+1
+            -if(product.newstock=="Out of stock")
+                -outofstock=outofstock+1
+            -if(product.newprice!=product.oldprice)
+                -pricechanged=pricechanged+1
+            -if(product.newstock=="In stock" && product.oldstock=="Out of stock")
+                -backinstock=backinstock+1
+            -if(product.updatestatus=="Updated")
+                -updated=updated+1
+            -if(product.updatestatus=="Not Updated")
+                -notupdated=notupdated+1
+        nav#navbar 
+            div.logo 
+                img(src="../../static/img/bg6.png", alt="Error Loading Image")
+            ul.navlist
+                li #[a(href="#") My Store]
+            div.rightnav 
+                if(currentUser)
+                    ul
+                        li #[a(href="/username") #{currentUser.name}]
+                        li #[a(href="/changepassword") Change Password]
+                        li #[a(href="/logout") Log Out]
+        div.container
+            div.cont
+                include ../partials/sidebar.pug
+            div.container1
+                div.dashboard 
+                    div.firstrow 
+                        div.card1
+                            div.boxcard 
+                                span.head Total Products 
+                                span.value #{total}
+                    div.secondrow 
+                        div.card2.same
+                            div.card21
+                                div.up.boxcard
+                                    span.head In Stock
+                                    span.value #{instock}
+                            hr
+                            div.card22
+                                div.down
+                                    a(href="/instock") 
+                                        span.view View Details 
+                                        span.right 
+                                            i(class="fa fa-angle-right")
+                        div.card3.same
+                            div.card21
+                                div.up.boxcard
+                                    span.head Out of Stock 
+                                    span.value #{outofstock}
+                            hr
+                            div.card22
+                                div.down
+                                    a(href="/outofstock") 
+                                        span.view View Details 
+                                        span.right 
+                                            i(class="fa fa-angle-right")
+                        div.card4.same
+                            div.card21
+                                div.up.boxcard
+                                    span.head Price Changed 
+                                    span.value #{pricechanged}
+                            hr
+                            div.card22
+                                div.down
+                                    a(href="/pricechanged") 
+                                        span.view View Details 
+                                        span.right 
+                                            i(class="fa fa-angle-right")
+                        div.card5.same
+                            div.card21
+                                div.up.boxcard
+                                    span.head Back In Stock
+                                    span.value #{backinstock}
+                            hr
+                            div.card22
+                                div.down
+                                    a(href="/backinstock") 
+                                        span.view View Details 
+                                        span.right 
+                                            i(class="fa fa-angle-right")
+                        
+                    div.thirdrow 
+                        h1 Product Update Information 
+                    div.fourthrow
+                        div.card6.same
+                            div.card21
+                                div.up.boxcard
+                                    span.head Updated Products 
+                                    span.value #{updated}
+                            hr
+                            div.card22
+                                div.down
+                                    a(href="/updated") 
+                                        span.view View Details 
+                                        span.right 
+                                            i(class="fa fa-angle-right")
+                        div.card7.same
+                            div.card21
+                                div.up.boxcard
+                                    span.head Not Updated Products 
+                                    span.value #{notupdated}
+                            hr
+                            div.card22
+                                div.down
+                                    a(href="/notupdated") 
+                                        span.view View Details 
+                                        span.right 
+                                            i(class="fa fa-angle-right")
+        
+                

@@ -1,0 +1,24 @@
+extends base.pug 
+
+block scripts
+    script(src='../static/index.js')
+
+block style
+    style
+      include ../../static/stylelogin.css
+      include ../../static/style.css
+      include ../../static/forgot.css
+block content
+    div.container
+        div.small2
+            div.block1
+                include ../partials/messages.pug
+            div.heading
+                h1 Forgot Password
+            form(action="/forgot",method="post",class="forgot-form")
+                div.box 
+                    input(type="email",name="email",id="email" ,class="emailid",placeholder="Enter your Email")
+                div.box
+                    button(class="btn", name="submit", type="submit")
+                        | Send Email
+                a(href="/login") Back to Login.
