@@ -18,7 +18,7 @@ function isAuthenticatedUser(req, res, next) {
 
 let browser;
 
-//Scrape Function
+//Scrape Function:-
 async function scrapeData(url, page) {
     try {
         await page.goto(url, {waitUntil: 'load', timeout : 0});
