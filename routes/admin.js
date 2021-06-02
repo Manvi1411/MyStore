@@ -25,41 +25,32 @@ async function scrapeData(url, page) {
         const html = await page.evaluate(()=> document.body.innerHTML);
         const $ = await cheerio.load(html);
 
-        let title = $("h1").attr('content');
-        let price = $(".price-characteristic").attr("content");
+        let title = $("h1").text();
 
-        if(!price) {
-            let dollars = $("#price > div > span.hide-content.display-inline-block-m > span > span.price-group.price-out-of-stock > span.price-characteristic").text();
-            let cents = $("#price > div > span.hide-content.display-inline-block-m > span > span.price-group.price-out-of-stock > span.price-mantissa").text();
-            price = dollars+'.'+cents;
-        }
+        let dollars = $('#main > div > div > div.sc-pc-large-desktop-product-card > div > div.sc-pc-large-desktop-layout-columns > div.sc-pc-large-desktop-layout-content > div.sc-pc-dual-price > div > span.sc-price > span > span.Price-characteristic').text();
+        let cents = $('#main > div > div > div.sc-pc-large-desktop-product-card > div > div.sc-pc-large-desktop-layout-columns > div.sc-pc-large-desktop-layout-content > div.sc-pc-dual-price > div > span.sc-price > span > span.Price-mantissa').text();
+        price = dollars+'.'+cents;
 
         let seller = '';
-        let checkSeller = $('.seller-name');
+        let checkSeller = $('#policies-link > div:nth-child(3) > div').text();
         if(checkSeller) {
             seller = checkSeller.text();
         }
 
         let outOfStock = '';
-        let checkOutOfStock = $('.prod-ProductOffer-oosMsg');
+        let checkOutOfStock = $('.sc-pc-stock-label').text();
         if(checkOutOfStock) {
             outOfStock = checkOutOfStock.text();
         }
 
-        let deliveryNotAvaiable = '';
-        let checkDeliveryNotAvailable = $('.fulfillment-shipping-text');
-        if(checkDeliveryNotAvailable) {
-            deliveryNotAvaiable = checkDeliveryNotAvailable.text();
-        }
-
         let stock = '';
 
-        if(!(seller.includes('Walmart')) || outOfStock.includes('Out of Stock') || 
-            deliveryNotAvaiable.includes('Delivery not available')) {
-                stock = 'Out of stock';
-            } else {
-                stock = 'In stock';
-            }
+        if(!(seller.includes("This product is covered by the Sam's Club Member Satisfaction Guarantee.")) || outOfStock.includes('Out of Stock'))
+        {
+            stock = 'Out of stock';
+        } else {
+            stock = 'In stock';
+        }
 
         return {
             title,
