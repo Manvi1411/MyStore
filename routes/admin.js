@@ -45,7 +45,7 @@ async function scrapeData(url, page) {
 
         let stock = '';
 
-        if(!(seller.includes("This product is covered by the Sam's Club Member Satisfaction Guarantee.")) || outOfStock.includes('Out of Stock'))
+        if(!(seller.includes("This product is covered by the Sam's Club Member Satisfaction Guarantee.")) || outOfStock.includes('Out of stock'))
         {
             stock = 'Out of stock';
         } else {
