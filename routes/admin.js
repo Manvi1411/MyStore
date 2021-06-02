@@ -34,13 +34,13 @@ async function scrapeData(url, page) {
         let seller = '';
         let checkSeller = $('#policies-link > div:nth-child(3) > div').text();
         if(checkSeller) {
-            seller = checkSeller.text();
+            seller = checkSeller;
         }
 
         let outOfStock = '';
         let checkOutOfStock = $('.sc-pc-stock-label').text();
         if(checkOutOfStock) {
-            outOfStock = checkOutOfStock.text();
+            outOfStock = checkOutOfStock;
         }
 
         let stock = '';
