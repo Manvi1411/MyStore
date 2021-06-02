@@ -81,7 +81,7 @@ router.get('/new', isAuthenticatedUser, async (req, res)=> {
     try {
         let url = req.query.search;
         if(url) {
-            browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+            browser = await puppeteer.launch({headless: true, args: ['--no-sandbox'] });
             const page = await browser.newPage();
             let result = await scrapeData(url,page);
 
@@ -247,7 +247,7 @@ router.post('/updateproduct',isAuthenticatedUser,async(req,res)=>{
                     Product.updateOne({'url':products[i].url},{$set:{'oldprice':products[i].newprice, 'oldstock':products[i].newstock,'updatestatus':'Not Updated' }})
                         .then(products=>{})
                 }
-                browser=await puppeteer.launch({ args: ['--no-sandbox'] });
+                browser=await puppeteer.launch({headless: true, args: ['--no-sandbox'] });
                 const page=await browser.newPage();
                 for(let i=0;i<products.length;i++)
                 {
