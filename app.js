@@ -46,7 +46,7 @@ passport.deserializeUser(User.deserializeUser());
 //middleware for method override
 app.use(methodOverride('_method'));
 
-//middleware for connect flash
+//middle ware for connect flash
 app.use(flash());
 app.use((req, res, next)=> {
     res.locals.success_msg = req.flash(('success_msg'));
